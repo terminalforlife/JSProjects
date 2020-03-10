@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Tue 10 Mar 13:05:45 GMT 2020
+// Last Change       - Tue 10 Mar 13:16:11 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -96,3 +96,19 @@ if the text itself is wrapped in single-quotes; you have to wrap the text
 instead in double-quotes. The same is not true for the opposite.
 */
 console.log('What is this? '); console.log("It's cool, that's what!")
+
+// If statements are almost exactly like Perl and similar languages. A big
+// difference here is the comparison operator, which is `==` for strings AND
+// numbers (integers/floats), which is similar to how Shell works.
+//
+// Another difference is the `else if` part, which in Perl would be `elsif`.
+//
+// The usual comparison operators are in JS, but there's also `===` and `!==`
+// for being equal to value AND type, or the negation thereof, respectively.
+if (Array[0] == 'two'){
+	console.log("The Array[0] variable is equal to 'two'.")
+}else if (Array[2] == 'three'){
+	console.log("The Array[2] variable is equal to 'three'.")
+}else{
+	console.log("Neither Array[0] equals 'two' nor Array[2] equals 'three'.")
+}
