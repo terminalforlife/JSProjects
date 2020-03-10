@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Tue 10 Mar 12:32:12 GMT 2020
+// Last Change       - Tue 10 Mar 12:37:17 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -52,3 +52,9 @@ console.log('The Key variable is of type: ' + typeof(Key))
 // Since `+` is also a concatenation symbol, parentheses seem to work to treat
 // the arithmetic as just that, rather than otherwise appending `1.51.2`.
 console.log('Printing sum of 1.5 and 1.2 floats: ' + (1.5 + 1.2))
+
+// Escape sequences work like any other language, from the looks of it, but I
+// noticed that the use of `\e...` doesn't work, yet `\033...` does. I also
+// think it's worth keeping in mind that JS doesn't require double-quotes when
+// using escape sequences, unlike languages like Perl.
+console.log('Escape sequences for colors \033[1;31mwork\033[0m, too.')
