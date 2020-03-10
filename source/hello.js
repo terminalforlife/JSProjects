@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Tue 10 Mar 12:48:39 GMT 2020
+// Last Change       - Tue 10 Mar 13:05:45 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -40,6 +40,10 @@ console.log('Printing a literal string to a terminal/console.')
 //
 // Variables are dynamic in JS, working similar to languages like Perl, but
 // a float or integer is simply of type 'number' instead of 'float' or 'int'.
+//
+// There are two categories of variables in JS, 'Primitive Types' and
+// 'Composite Types'. The former includes 'number', 'string', 'boolean', and
+// the latter includes 'object' and 'array'.
 var Key = 'Value'
 
 // Concatenating strings like this is a necessity in JS (utterly ridiculous!).
@@ -52,6 +56,20 @@ console.log('Printing the contents of variable Key: ' + Key)
 // value, but you won't see anything if you just run it as-is; think of errors
 // in Perl complaining about 'void context'.
 console.log('The Key variable is of type: ' + typeof(Key))
+
+// A boolean (string?) variable is its own type as mentioned previously. We
+// needn't quote the `true` part, since that would make it `string` (literal).
+var Boolean = true
+console.log('The Boolean variable is of type: ' + typeof(Boolean))
+
+// As in other languages, numbers in JS aren't quoted, lest they'd be strings.
+var Number = 1
+console.log('The Number variable is of type: ' + typeof(Number))
+
+// Arrays (assignment and receiving) in JS work like in Perl.
+var Array = ['one', 'two', 'three']
+console.log('The second index of Array variable is: ' + Array[1])
+console.log('The Array variable is of type: ' + typeof(Array))
 
 // Since `+` is also a concatenation symbol, parentheses seem to work to treat
 // the arithmetic as just that, rather than otherwise appending `1.51.2`.
@@ -68,9 +86,13 @@ console.log('Escape sequences for colors \033[1;31mwork\033[0m, too.')
 // to a document, separately.
 // document.write('text')
 
-// Code can be stuck together on the one line, like other languages. Also, I've
-// noticed here that the same single-quote (`'`) problem comes up in JS as in
-// other languages like Shell and Perl, in that you can't escape the single-
-// -quote if the text itself is wrapped in single-quotes; you have to wrap the
-// text instead in double-quotes. The same is not true for the opposite.
+/*
+This is a multi-line comment. Obviously this won't show up when executed.
+
+Code can be stuck together on the one line, like other languages. Also, I've
+noticed here that the same single-quote (`'`) problem comes up in JS as in
+other languages like Shell and Perl, in that you can't escape the single--quote
+if the text itself is wrapped in single-quotes; you have to wrap the text
+instead in double-quotes. The same is not true for the opposite.
+*/
 console.log('What is this? '); console.log("It's cool, that's what!")
