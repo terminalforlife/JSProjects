@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Tue 10 Mar 12:37:17 GMT 2020
+// Last Change       - Tue 10 Mar 12:48:39 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -22,6 +22,10 @@
 //
 // Node.js is what I'll be focusing on, as I'm not too interested in website
 // development just yet, although I may set up a website some day, but not yet.
+//
+// A lot of tutorials seem to suggest that semi-colons are required at the end
+// of most lines, but this doesn't seem to be the case at all, at least
+// regarding Node.js.
 //-----------------------------------------------------------------------------
 
 // Usual quoting and escaping rules apply. This function seems to be for just
@@ -58,3 +62,15 @@ console.log('Printing sum of 1.5 and 1.2 floats: ' + (1.5 + 1.2))
 // think it's worth keeping in mind that JS doesn't require double-quotes when
 // using escape sequences, unlike languages like Perl.
 console.log('Escape sequences for colors \033[1;31mwork\033[0m, too.')
+
+// This seems to only be valid when embedding JS into a HTML webpage. Although
+// I suspect `document` can still be done with Node.js, but maybe by referring
+// to a document, separately.
+// document.write('text')
+
+// Code can be stuck together on the one line, like other languages. Also, I've
+// noticed here that the same single-quote (`'`) problem comes up in JS as in
+// other languages like Shell and Perl, in that you can't escape the single-
+// -quote if the text itself is wrapped in single-quotes; you have to wrap the
+// text instead in double-quotes. The same is not true for the opposite.
+console.log('What is this? '); console.log("It's cool, that's what!")
