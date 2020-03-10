@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Tue 10 Mar 13:24:56 GMT 2020
+// Last Change       - Tue 10 Mar 13:36:26 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -98,8 +98,8 @@ instead in double-quotes. The same is not true for the opposite.
 console.log('What is this? '); console.log("It's cool, that's what!")
 
 // If statements are almost exactly like Perl and similar languages. A big
-// difference here is the comparison operator, which is `==` for strings AND
-// numbers (integers/floats), which is similar to how Shell works.
+// difference here is the comparison operator, all of which seem to apply to
+// strings AND numbers.
 //
 // Another difference is the `else if` part, which in Perl would be `elsif`.
 //
@@ -116,7 +116,39 @@ if (Array[0] == 'two'){
 // Not quite sure how to create a list in-place, but here we're iterating over
 // and printing the contents of each index in the Array variable. The syntax
 // here is similar to languages like Perl, AWK, VimScript, Shell, etc.
+//
+// Omitting the `[I]` part will instead print the index numbers (0, 1, 2...).
 console.log("Now to iterate using a 'for' loop:")
 for (I in Array){
 	console.log('Iteratation: ' + Array[I])
 }
+
+// The logical 'and' and 'or' operators are as normal, except there doesn't
+// seem to be an actual 'and' and 'or' variant, as in languages like Perl.
+if (Number == 0 || Number == 1){
+	console.log("The Number variable is equal to either '0' or '1'.")
+}
+
+// There are many more variable assignment operators, as in other languages, -
+// such as the following:
+//
+//   =     equal to
+//   +=    increment
+//   -=    decrement
+//   *=    multiply
+//   /=    devide
+//   %=    modulus
+//
+Number+=7
+console.log("The Number variable is now equal to: " + Number)
+
+Number/=2
+console.log("The Number variable is now equal to: " + Number)
+
+Number-=3
+console.log("The Number variable is now equal to: " + Number)
+
+// There is also the usual `++` and `--` syntax, to increment and decrement, -
+// respectively, without the need for an actual assignment (implied?).
+Number++
+console.log("The Number variable is now equal to: " + Number)
