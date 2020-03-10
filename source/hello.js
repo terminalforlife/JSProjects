@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Tue 10 Mar 13:16:11 GMT 2020
+// Last Change       - Tue 10 Mar 13:24:56 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -111,4 +111,12 @@ if (Array[0] == 'two'){
 	console.log("The Array[2] variable is equal to 'three'.")
 }else{
 	console.log("Neither Array[0] equals 'two' nor Array[2] equals 'three'.")
+}
+
+// Not quite sure how to create a list in-place, but here we're iterating over
+// and printing the contents of each index in the Array variable. The syntax
+// here is similar to languages like Perl, AWK, VimScript, Shell, etc.
+console.log("Now to iterate using a 'for' loop:")
+for (I in Array){
+	console.log('Iteratation: ' + Array[I])
 }
