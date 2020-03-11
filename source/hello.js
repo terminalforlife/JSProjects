@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Tue 10 Mar 13:36:26 GMT 2020
+// Last Change       - Tue 10 Mar 20:34:54 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -152,3 +152,22 @@ console.log("The Number variable is now equal to: " + Number)
 // respectively, without the need for an actual assignment (implied?).
 Number++
 console.log("The Number variable is now equal to: " + Number)
+
+// This sends output to STDERR, suitable for an error message.
+console.error('ERROR: One or more failures have ocurred.')
+
+function Err(One){
+	console.error('ERROR: ' + One)
+}
+
+Err('One or more failures have ocurred.')
+
+console.log('Running ' + process.version + ' of Node.js.')
+
+console.log('The PID of this session is ' + process.pid + '.')
+//console.log("Time to 'process.kill(" + process.pid + ")' this session...")
+//process.kill(process.pid)
+
+console.log("You're OS is " + process.platform + '.')
+
+console.log(process.moduleLoadList)
