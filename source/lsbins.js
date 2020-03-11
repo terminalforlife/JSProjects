@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/lsbins.js
 // Started On        - Wed 11 Mar 16:13:33 GMT 2020
-// Last Change       - Wed 11 Mar 16:33:17 GMT 2020
+// Last Change       - Wed 11 Mar 16:57:57 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -13,28 +13,32 @@
 var CurVer = '2020-03-11'
 var Progrm = 'lsbins'
 
-// Rudimentary argument processing.
-var Count = 0
-for (Arg in process.argv){
-	// Need to count the arguments, unless there's a better way.
-	Count++
+// It turns out there is a `shift()` in JS, so here goes that approach. Well, -
+// this works, but for some reason, it insists on including 2 useless
+// arguments, but not when running in the interactive JS environment.
+//
+// I need to skip the first two (?) arguments. This is sloppy as all balls, but
+// I'm not sure how to do this properly just yet, hence the following lines.
+process.argv.shift()
+process.argv.shift()
 
-	// An `if` statement in short-form. No braces needed, but parentheses
-	// are, unlike in languages like Perl.
+while (process.argv.length > 0){
+	// Testing line, to see each of the arguments.
+	//console.log(process.argv[0])
+
+	// By starting at index `2` here, we're ensuring the all is left is
+	// undefined variables, which can be easily ignored.
 	//
-	// The reason I'm skipping 0, 1, and 2, is that they seem to not actually
-	// be the arguments to the script, but rather, some of the arguments to
-	// Node.js, or something. In any case, I only want the regular arguments.
-	if (Count <= 2) continue
-
-	// I'd like to have Arg equal the value of the current argument, not its
-	// index, but I'm not sure how to do that, so I'm doing it this way.
-	//console.log('Argument: ' + process.argv[Arg])
-
 	// Using REGEX in this statement seems to be the same as in Perl.
-	if (process.argv[Arg] =~ /^(--version|-v)$/){
+	if (process.argv[0] =~ /^(--version|-v)$/){
+		// This keeps repeating itself for each argument provided, regardless
+		// of whether it matches the REGEX or not; why?
 		console.log(CurVer)
+	}else{
+		// This is never happening, for some reason.
+		console.error('ERROR: Unrecognised option(s) provided.')
 	}
+
+	// It's like this isn't being executed.
+	process.argv.shift()
 }
-
-
