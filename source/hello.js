@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Wed 11 Mar 16:18:59 GMT 2020
+// Last Change       - Wed 11 Mar 17:08:12 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -173,7 +173,13 @@ Err('One or more failures have ocurred.')
 // The `process` object allows for various useful functions and variables for
 // determining things like self process ID, OS type, and architecture.
 console.log('Running ' + process.version + ' of Node.js.')
-console.log("You're OS is " + process.platform + '.')
+
+// Unlike `os.type()`, this variable holds the value of `linux` instead of
+// `Linux`, if of course running GNU/Linux.
+console.log(
+	"Variable 'process.platform' says your system is: " +
+	process.platform
+)
 
 console.log('The PID of this session is ' + process.pid + '.')
 //console.log("Time to 'process.kill(" + process.pid + ")' this session...")
@@ -203,3 +209,16 @@ console.log(
 	"The current user's UID is " + process.getuid() +
 	' and GID is ' + process.getgid() + '.'
 )
+
+// Defining a constant (readonly variable, basically). The `os` constant then
+// seems to mimic the operation of an object. This is basically what was used
+// above, but `os` is one of the JS core modules, or Node.js, specially (?).
+const os = require('os')
+
+// Using the `type()` function with the new `os` constant (object (?)), we can
+// display the operating system type, which shows `Linux` instead of `linux`, -
+// which `process.platform` returns.
+console.log("Function 'os.type()' says your system is: " + os.type())
+
+// Output the full path to the current user's HOME directory.
+console.log('Your HOME is: ' + os.homedir())
