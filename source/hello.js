@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Wed 11 Mar 15:15:45 GMT 2020
+// Last Change       - Wed 11 Mar 15:22:12 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -20,8 +20,8 @@
 // be used to create desktop or mobile (Android and iOS) applications, or for
 // web development, which is probably the most common usage.
 //
-// Node.js is what I'll be focusing on, as I'm not too interested in website
-// development just yet, although I may set up a website some day, but not yet.
+// Node.js (v4.2.6) is what I'll be focusing on, as I'm not too interested in
+// website development just yet, although I may set up a website some day.
 //
 // A lot of tutorials seem to suggest that semi-colons are required at the end
 // of most lines, but this doesn't seem to be the case at all, at least
@@ -183,3 +183,5 @@ console.log('The PID of this session is ' + process.pid + '.')
 // I imagine a `for` loop iterating over each index in the array would be
 // better, but I couldn't figure out how to do that properly.
 //console.log(process.moduleLoadList)
+
+
