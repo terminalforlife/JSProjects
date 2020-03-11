@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Wed 11 Mar 17:08:12 GMT 2020
+// Last Change       - Wed 11 Mar 17:19:03 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -209,16 +209,3 @@ console.log(
 	"The current user's UID is " + process.getuid() +
 	' and GID is ' + process.getgid() + '.'
 )
-
-// Defining a constant (readonly variable, basically). The `os` constant then
-// seems to mimic the operation of an object. This is basically what was used
-// above, but `os` is one of the JS core modules, or Node.js, specially (?).
-const os = require('os')
-
-// Using the `type()` function with the new `os` constant (object (?)), we can
-// display the operating system type, which shows `Linux` instead of `linux`, -
-// which `process.platform` returns.
-console.log("Function 'os.type()' says your system is: " + os.type())
-
-// Output the full path to the current user's HOME directory.
-console.log('Your HOME is: ' + os.homedir())
