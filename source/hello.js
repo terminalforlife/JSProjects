@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Wed 11 Mar 17:19:03 GMT 2020
+// Last Change       - Wed 11 Mar 19:46:45 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -209,3 +209,9 @@ console.log(
 	"The current user's UID is " + process.getuid() +
 	' and GID is ' + process.getgid() + '.'
 )
+
+// Useful but seemingly-limited module for TTY stuff.
+const tty = require('tty')
+
+// The `isatty()` function returns a boolean value.
+console.log("It's " + tty.isatty() + " that we're in a TTY.")

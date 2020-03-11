@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/os.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Wed 11 Mar 17:23:18 GMT 2020
+// Last Change       - Wed 11 Mar 19:48:25 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -32,3 +32,7 @@ console.log('You have ' + (os.freemem() / 1024 / 1024) + 'M memory remaining.')
 // The `os` module offers the `hostname()` function to display the system's
 // hostname, although I'm not sure whether it's the short form or what.
 console.log('Your hostname is: ' + os.hostname())
+
+// Grabbing the CPU model seems pretty easy in JavaScript. In this example, -
+// we're using the first core of the CPU, hence the `[0]` usage.
+console.log('CPU model: ' + os.cpus()[0].model)
