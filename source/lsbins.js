@@ -3,12 +3,15 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/lsbins.js
 // Started On        - Wed 11 Mar 16:13:33 GMT 2020
-// Last Change       - Wed 11 Mar 16:57:57 GMT 2020
+// Last Change       - Wed 11 Mar 19:19:04 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
 // Testing to see how much of lsbins(1) functionality I can replicate with JS.
 //-----------------------------------------------------------------------------
+
+const path = require('path')
+const os = require('os')
 
 var CurVer = '2020-03-11'
 var Progrm = 'lsbins'
