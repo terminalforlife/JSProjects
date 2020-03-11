@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Tue 10 Mar 20:34:54 GMT 2020
+// Last Change       - Wed 11 Mar 15:15:45 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -153,21 +153,33 @@ console.log("The Number variable is now equal to: " + Number)
 Number++
 console.log("The Number variable is now equal to: " + Number)
 
-// This sends output to STDERR, suitable for an error message.
-console.error('ERROR: One or more failures have ocurred.')
-
+// Defining a function is similar to languages like AWK and Perl, but there's
+// also a similarity to function defining in Shell, with the exception that the
+// parentheses don't seem to have use there, but does here.
+//
+// Within the parentheses, you optionally provide one or more variable names, -
+// used as the positional parameters for the function. Failure to do so, yet
+// still providing arguments when calling the function, will result in a bunch
+// of `undefined` instances.
 function Err(One){
+	// This sends output to STDERR, suitable for an error message.
 	console.error('ERROR: ' + One)
 }
 
+// Calling a function works like most other languages. This function call, -
+// for example, is indistinguishable from my usual `Err()` subroutine in Perl.
 Err('One or more failures have ocurred.')
 
+// The `process` object allows for various useful functions and variables for
+// determining things like self process ID, OS type, and architecture.
 console.log('Running ' + process.version + ' of Node.js.')
+console.log("You're OS is " + process.platform + '.')
 
 console.log('The PID of this session is ' + process.pid + '.')
 //console.log("Time to 'process.kill(" + process.pid + ")' this session...")
 //process.kill(process.pid)
 
-console.log("You're OS is " + process.platform + '.')
-
-console.log(process.moduleLoadList)
+// With this function, it's possible to list all the currently loaded modules.
+// I imagine a `for` loop iterating over each index in the array would be
+// better, but I couldn't figure out how to do that properly.
+//console.log(process.moduleLoadList)
