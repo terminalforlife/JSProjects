@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Wed 11 Mar 15:22:12 GMT 2020
+// Last Change       - Wed 11 Mar 16:12:09 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -184,4 +184,15 @@ console.log('The PID of this session is ' + process.pid + '.')
 // better, but I couldn't figure out how to do that properly.
 //console.log(process.moduleLoadList)
 
+// Run the associated file. This is done immediately. You can, however, assign
+// it to a variable, as an object, which can then be called when desired, -
+// even with arguments.
+console.log('Loading module...')
+require('./module.js')
+console.log('...finished with module.')
 
+// The `chdir()` function to the `process` object seems to work like any other
+// standard directory-changing function.
+console.log("Changing to the '/' directory.")
+process.chdir('/')
+console.log('The CWD is now: ' + process.cwd())
