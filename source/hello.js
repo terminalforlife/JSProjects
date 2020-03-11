@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/hello.js
 // Started On        - Tue 10 Mar 11:40:40 GMT 2020
-// Last Change       - Wed 11 Mar 16:12:09 GMT 2020
+// Last Change       - Wed 11 Mar 16:18:59 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -196,3 +196,10 @@ console.log('...finished with module.')
 console.log("Changing to the '/' directory.")
 process.chdir('/')
 console.log('The CWD is now: ' + process.cwd())
+
+// The current user's UID and GID can be easily accessed via the below command.
+// Thankfully, JS allows the function call to be split up, much like in Perl.
+console.log(
+	"The current user's UID is " + process.getuid() +
+	' and GID is ' + process.getgid() + '.'
+)
