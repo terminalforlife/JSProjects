@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Project Name      - JSProjects/source/lsbins.js
 // Started On        - Wed 11 Mar 16:13:33 GMT 2020
-// Last Change       - Thu 19 Mar 21:04:11 GMT 2020
+// Last Change       - Thu 19 Mar 22:17:28 GMT 2020
 // Author E-Mail     - terminalforlife@yahoo.com
 // Author GitHub     - https://github.com/terminalforlife
 //-----------------------------------------------------------------------------
@@ -45,13 +45,14 @@ while (process.argv.length > 0){
 	process.argv.shift()
 }
 
-function GetFiles(){
-	if (arguments[1] != undefined){
-		console.log(arguments[1].sort().join('\n'))
-	}
-}
-
-var Dirs = process.env.PATH.split(':')
-for (Index in Dirs){
-	fs.readdir(Dirs[Index], GetFiles)
-}
+process.env.PATH.split(':').forEach(
+	Dir => fs.readdir(Dir,
+		function (Errors, Files){
+			if (Errors !== null){
+				throw(Errors)
+			}else{
+				Files.forEach(File => console.log(File))
+			}
+		}
+	)
+)
