@@ -4,13 +4,28 @@
 	</head>
 
 	<body>
-		<center><h1>Demonstration of Embedded JavaScript</h1></center>
+		<center><h1>SimpleMSG <font face='Ubuntu Mono', size=5> - Basic 2-way
+		communications platform.</font></h1>
 
-		This is a simple page to demonstrate <b>very</b> basic use of HTML alongside
-		JavaScript.<p>
+		<hr>
+
+		<p><textarea id='UserInput', placeholder='Enter your message here...', autofocus=true, rows=12, cols=100, required=true></textarea>
+		<p><button id='SendButton', onclick='SaveData()'>Send</button><p>
+
+		<hr>
+
 
 		<script type='text/javascript'>
-			document.write('test')
+			const fs = require('fs')
+
+			function SaveData(){
+				if (UserInput.value.length == 0){
+					alert('You have to enter a message in order to send it.')
+				}
+
+				fs.appendFile('/tmp/temp.txt', UserInput.value)
+				console.log("Data from ID 'UserInput' saved.")
+			}
 		</script>
 	</body>
 </html>
